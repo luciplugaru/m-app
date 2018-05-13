@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~basscss/css/basscss.css";
+
+html {
+  font-size: 13px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+span.appName {
+  color: #36af6d;
+}
+
+.font-grey {
+  color: darkgray;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a.link {
+  text-align: right;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 52em) {
+  html { font-size: 15px; }
+}
+
+@media (min-width: 64em) {
+  html { font-size: 17px; }
+}

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SavedComponent } from './saved/saved.component';
+import { ViewerComponent } from './viewer/viewer.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'viewer', component: ViewerComponent },
   { path: 'saved', component: SavedComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/viewer', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

@@ -1,0 +1,16 @@
+shared-feature {
+  width: 100%;
+}
+
+@media (min-width: 52em) {
+  shared-feature {
+    width: 50%;
+  }
+}
+
+@media (min-width: 64em) {
+  shared-feature {
+    width: 25%;
+  }
+}
+

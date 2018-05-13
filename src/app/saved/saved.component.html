@@ -1,3 +1,19 @@
-<p>
-  saved works!
-</p>
+<main class="lg-col-10 mx-auto">
+
+  <a class="link"
+     [routerLink]="'../'">
+    Back
+  </a>
+
+  <div *ngIf="savedFeatures && !savedFeatures.length"
+       class="ml1">
+    No saved features yet :(
+  </div>
+
+  <div class="flex flex-wrap justify-center">
+    <shared-feature *ngFor="let feature of savedFeatures"
+                    [feature]="feature"
+                    [shortVersion]="true"></shared-feature>
+  </div>
+
+</main>

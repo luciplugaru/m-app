@@ -1,0 +1,63 @@
+<main class="lg-col-10 mx-auto">
+
+  <div *ngIf="!features" class="ml1">Loading...</div>
+
+  <a *ngIf="features"
+     class="link"
+     [routerLink]="'../saved'">
+    View all saved images
+  </a>
+
+  <section class="sm-col sm-col-12 md-col-7">
+    <shared-feature [feature]="activeFeature"></shared-feature>
+  </section>
+
+  <aside *ngIf="features && activeFeature" class="sm-col sm-col-12 md-col-5">
+
+    <article *ngFor="let feature of features"
+             [class.active]="feature.imageKey === activeFeature.imageKey"
+             class="clearfix">
+
+      <figure class="flex">
+
+        <div (click)="changeActiveFeature(feature)">
+          <img [src]="feature.src.thumb320">
+        </div>
+
+        <figcaption>
+
+          <small class="right italic">
+            {{ feature.properties.captured_at | date: 'mediumDate' }}
+          </small>
+
+          <div class="mt1 ml1">
+
+            <small class="clearfix font-grey">
+              Lat: {{ feature.geometry.coordinates[0][0] | number }}
+              <br>
+              Long: {{ feature.geometry.coordinates[0][1] | number }}
+            </small>
+
+          </div>
+
+          <button *ngIf="!feature.saved"
+                  class="save right"
+                  (click)="saveFeature(feature)">Save
+          </button>
+
+        </figcaption>
+
+      </figure>
+
+    </article>
+
+    <button *ngIf="features"
+            class="loadMore"
+            [disabled]="loadingSequences"
+            (click)="loadMoreFeatures()">
+      {{features && loadingSequences ? 'Loading...' : 'View More' }}
+    </button>
+
+  </aside>
+
+</main>

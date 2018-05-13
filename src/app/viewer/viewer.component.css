@@ -1,0 +1,48 @@
+aside {
+  margin: 0.5em auto;
+  max-height: 40em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+article.active {
+  background-color: #f6f5f5;
+}
+
+figure {
+  margin: 0;
+  padding: 0.2em;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+img {
+  width: 8em;
+  height: 4em;
+  margin-bottom: -5px;
+}
+
+button.save {
+  background-color: #7fcca2;
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 0.3em 0.5em;
+}
+
+button.loadMore {
+  width: 100%;
+  background-color: #8c8a8a;
+  color: #f6f5f5;
+  padding: 1em;
+  margin: 1em 0.2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:disabled {
+  background-color: #ebeaea;
+  color: #7e7c7c;
+  box-shadow: none;
+}

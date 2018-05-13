@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-import { CardComponent } from './card/card.component';
 import { SavedComponent } from './saved.component';
 import { SharedModule } from '../shared/shared.module';
+import { FeatureModule } from '../shared/feature/feature.module';
 
 @NgModule({
   imports: [
-    SharedModule
+    SharedModule,
+    FeatureModule,
+    RouterModule
   ],
-  declarations: [
-    CardComponent,
-    SavedComponent
-  ]
+  declarations: [ SavedComponent ]
 })
 export class SavedModule {
 }

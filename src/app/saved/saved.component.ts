@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ExtendedFeature } from '../shared/interfaces';
+import { StorageHelper } from '../shared/storage.helper';
+
 @Component({
-  selector: 'app-saved',
   templateUrl: './saved.component.html',
   styleUrls: [ './saved.component.css' ]
 })
 export class SavedComponent implements OnInit {
-  
-  constructor() {
-  }
+  savedFeatures: ExtendedFeature[];
   
   ngOnInit() {
+    this.savedFeatures = StorageHelper.get('savedFeatures') || [];
   }
   
 }

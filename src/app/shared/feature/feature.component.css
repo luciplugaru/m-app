@@ -1,0 +1,34 @@
+article {
+  padding: 0.5em;
+}
+
+hr {
+  margin: 1em auto;
+  height: 0;
+  width: 100%;
+  border: none;
+  border-top: 1px solid #d9d5d5;
+}
+
+figure {
+  margin: 0;
+  padding: 0.2em;
+}
+
+.details {
+  width: 100%;
+  min-height: 5em;
+}
+
+img.main {
+  width: 100%;
+  height: auto;
+}
+
+.avatar {
+  width: 5em;
+  height: 5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+

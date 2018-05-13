@@ -1,0 +1,43 @@
+<article *ngIf="feature">
+
+  <figure>
+
+    <img class="main" [src]="feature.src.thumb640">
+
+    <hr>
+
+    <figcaption class="flex">
+
+      <div>
+        <img *ngIf="feature.user && !shortVersion"
+             class="avatar circle"
+             [src]="feature.user.avatar">
+      </div>
+
+      <div class="details">
+
+        <ng-container *ngIf="feature.user && !shortVersion">
+          <small class="bold">
+            {{ feature.user.username}}
+          </small>
+
+          <small class="right italic">
+            Member since {{ feature.user.created_at | date: 'mediumDate' }}
+          </small>
+
+          <p class="justify">{{ feature.user.about }}</p>
+        </ng-container>
+
+        <p>Camera used: {{ feature.properties.camera_make }}</p>
+
+        <small class="right italic">Captured on {{ feature.properties.captured_at | date: 'long' }}</small>
+
+      </div>
+
+    </figcaption>
+
+    <hr>
+
+  </figure>
+
+</article>
