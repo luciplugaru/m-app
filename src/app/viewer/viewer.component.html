@@ -8,11 +8,11 @@
     View all saved images
   </a>
 
-  <section class="sm-col sm-col-12 md-col-7">
+  <section>
     <shared-feature [feature]="activeFeature"></shared-feature>
   </section>
 
-  <aside *ngIf="features && activeFeature" class="sm-col sm-col-12 md-col-5">
+  <aside *ngIf="features && activeFeature">
 
     <article *ngFor="let feature of features"
              [class.active]="feature.imageKey === activeFeature.imageKey"

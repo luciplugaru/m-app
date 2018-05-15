@@ -25,6 +25,18 @@ img.main {
   height: auto;
 }
 
+#viewer {
+  width: 640px;
+  height: 480px;
+}
+
+@media (max-width: 700px) {
+  #viewer {
+    width: 440px;
+    height: 330px;
+  }
+}
+
 .avatar {
   width: 5em;
   height: 5em;

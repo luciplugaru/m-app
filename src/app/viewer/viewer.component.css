@@ -46,3 +46,42 @@ button:disabled {
   color: #7e7c7c;
   box-shadow: none;
 }
+
+section {
+  width: 650px;
+  float: none;
+  margin: auto;
+}
+
+aside {
+  width: 650px;
+  clear: both;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  section {
+    width: 440px;
+    float: none;
+    margin: auto;
+  }
+
+  aside {
+    width: 440px;
+    clear: both;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1125px) {
+  section {
+    width: 650px;
+    float: left;
+  }
+
+  aside {
+    width: calc(100% - 670px);
+    float: right;
+    clear: none;
+  }
+}
